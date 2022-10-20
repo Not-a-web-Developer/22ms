@@ -8,25 +8,40 @@
   <title>IISERM 22MS Unofficial Page</title>
 
 <style>
-  body{
-    background:white;
+  @media(min-width:993px){
+    .hide-lg{display:none;}
+    
   }
-    @media(min-width:993px){.hide-lg{display:none;}}
-    @media(max-width:992px){.hide-sm{display:none;}}
+  @media(max-width:992px){
+    .hide-sm{display:none;}
+  }
+  body {
+    background-color: white;
+  }
+  svg {
+    padding-top: 0.2rem;
+    filter:  invert(22%) sepia(7%) saturate(238%) hue-rotate(2deg) brightness(95%) contrast(85%);
+  }
+
 </style>
 </head>
-<body>
+<body id="body">
     
-    <nav class="border fixed split-nav">
+  <nav class="border fixed split-nav">
   <div class="nav-brand">
     <h3><a href="#">IISER-Mohali</a></h3>
   </div>
   <div class="collapsible">
     <input id="collapsible1" type="checkbox" name="collapsible1">
     <label for="collapsible1">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
+      <!-- <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div> -->
+      <svg viewBox="0 0 100 80" width="40" height="40">
+        <rect width="100" height="10"></rect>
+        <rect y="30" width="100" height="10"></rect>
+        <rect y="60" width="100" height="10"></rect>
+      </svg>
     </label>
     <div class="collapsible-body">
       <ul class="inline">
@@ -38,16 +53,18 @@
     </div>
   </div>
 </nav>
+<main class="paper">
   <p style="padding-top:35px"></p>
- <center>
+ <!--center>
     <video controls loop autoplay style="width:96%;" class="hide-lg">
       <source src="http://iamtanmaypandey.000webhostapp.com/M.mp4" type="video/mp4"/>
   </video> 
    <video controls loop autoplay style="width:56%;" class="hide-sm">
       <source src="http://iamtanmaypandey.000webhostapp.com/M.mp4" type="video/mp4"/>
   </video> 
- </center> 
+ </center--> 
   
+ 
   <br>
   
   <div class="container">
@@ -56,19 +73,19 @@
         <img class="hide-lg" height="auto" src="https://www.iisermohali.ac.in/images/Logo_HR/iisermlogo.jpg">
     </div>
     <div style="width:60%;padding-left:10%;float:left">
-        <b><big>W</big></b>elcome to <i>IISER-Mohali</i>'s unofficial github page for MS22. This page has been created by IISER-Mohali 22MS batch students to help and connect with others who are going to join IISER-Mohali in 2022 for BSMS course.
+        <strong><big>W</big></strong>elcome to <em>IISER-Mohali</em>'s unofficial github page for MS22. This page has been created by IISER-Mohali 22MS batch students to help and connect with others who are going to join IISER-Mohali in 2022 for BSMS course.
     </div>
     <div style="clear:both"></div>
     
   </div>
   
   <div class="container">
-      <h2>Doubts during pre-registration and other</h2>
+      <h2>Doubts during pre-registration and other doubts</h2>
       <div class="row">
  
   <div class="collapsible">
     <input id="collapsible2" type="checkbox" name="collapsible">
-    <label for="collapsible2">What is mail id of IISERM?</label>
+    <label for="collapsible2">What is the email address of IISERM?</label>
     <div class="collapsible-body">
       <span>
           <div class="col-6 col">
@@ -79,7 +96,7 @@
   </div>
   <div class="collapsible">
     <input id="collapsible3" type="checkbox" name="collapsible">
-    <label for="collapsible3">When do we have to report to institute?</label>
+    <label for="collapsible3">When do we have to report to the institute?</label>
     <div class="collapsible-body">
       <span>
       As per the notification, it is 29th October.<br>
@@ -89,7 +106,7 @@
   </div>
   <div class="collapsible">
     <input id="collapsible4" type="checkbox" name="collapsible">
-    <label for="collapsible4">When our classes will start?</label>
+    <label for="collapsible4">When will our classes start?</label>
     <div class="collapsible-body">
       <span>31st October</span>
     </div>
@@ -105,7 +122,7 @@
   
   <div class="collapsible">
     <input id="collapsible6" type="checkbox" name="collapsible">
-    <label for="collapsible6">What to submit, self attested doc or original in pre-reg?</label>
+    <label for="collapsible6">What to submit, self-attested doc or original in pre-reg?</label>
     <div class="collapsible-body">
       <span>You have to submit original documents in pre-registration.</span>
     </div>
@@ -113,16 +130,22 @@
   
   <div class="collapsible">
     <input id="collapsible7" type="checkbox" name="collapsible">
-    <label for="collapsible7">What is difference between application form and admission form?</label>
+    <label for="collapsible7">What is the difference between application form and admission form?</label>
     <div class="collapsible-body">
       <span>
       When you login into IISER Candidate portal, you have to go to your channel of application (SCB/KVPY/IITJEE), then click on <b>edit/view</b>, the page you are at now is application form. Press CTRL+P to take print of that.
-    <i>Admission form</i>, can be found <a href="https://www.iiseradmission.in/resources/docs/AdmissionForm.pdf" class="btn-block">here</a>
+    <em>Admission form</em>, can be found <a href="https://www.iiseradmission.in/resources/docs/AdmissionForm.pdf" class="btn-block">here</a>
       </span>
     </div>
   </div>
   
 </div>
   </div>
+</main>
+  <script>
+  console.log(getElementById(body).style.backgroundColor);
+   //   if(document.body.style.backgroundColor != 'rgb(255,255,255)'){document.classList.add('dark');}  
+
+  </script>
   </body>
 </html>
